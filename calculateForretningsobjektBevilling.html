@@ -1,0 +1,52 @@
+<!----
+<script>
+
+"I alt: "       9+11+11+12+11+11+11+11+12+12+12+12+12+9+9+9+9+9+9+19+6+17+5+1
+"Bevares: "     4+4+3+14+3+4+3+1
+"Udfases: "     9+11+7+8+11+8+11+11+12+12+12+12+12+9+9+9+9+9+9+5+3+13+2+
+
+</script>
+-->
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Forretningsobjekt Dokument Attributter Summer</title>
+</head>
+<body>
+    <h2>Forretningsobjekt Dokument Attributter Summer</h2>
+    <ul>
+        <li id="totalIalt"></li>
+        <li id="totalBevares"></li>
+        <li id="totalUdfases"></li>
+        <li id="diffPercent"></li>
+
+    </ul>
+    <script>
+        // "I alt"
+        const iAlt = [9,11,12,11,11,12,9,19,6,17,5,1];
+        // "Bevares"
+        const bevares = [4,4,14,3,4,3,1];
+        // "Udfases"
+        const udfases = [9,7,8,8,11,12,9,5,3,13,2];
+
+        function sum(arr) {
+            return arr.reduce((a, b) => a + b, 0);
+        }
+
+        const totalIalt = sum(iAlt);
+        const totalBevares = sum(bevares);
+        const totalUdfases = sum(udfases);
+        const diff = totalIalt - totalBevares;
+        const diffPercent = ((diff / totalIalt) * 100).toFixed(2);
+
+        document.getElementById('totalIalt').textContent = 'Antal attributter i alt: ' + sum(iAlt);
+        document.getElementById('totalBevares').textContent = 'Antal attributter bevares: ' + sum(bevares);
+        document.getElementById('totalUdfases').textContent = 'Antal attributter udfases: ' + sum(udfases);
+        document.getElementById('diffPercent').textContent = 'I alt kan ' + diffPercent + '% af forretningsobjekt Dokument attributterne udfases';
+
+        
+    </script>
+</body>
+</html>
