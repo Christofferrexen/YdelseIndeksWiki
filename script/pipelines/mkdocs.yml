@@ -1,0 +1,75 @@
+site_name: Wiki
+site_url: https://mydomain.org/mysite
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+theme:
+  name: material
+  font:
+    text: Afacad Flux 
+    code: Red Hat Mono
+  icon:
+    logo: 
+  
+  palette:
+  # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+
+feature:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.
+  
+nav:
+  - Home: index.md
+  - About:
+    - About The Project: about/about.md
+  - First Time User:
+    - docs\FirstTimeUser\TilslutningTilInfrastuktur
+  - Github Codeexamples:
+    - Github Codeexamples: docs\GithubCodeexamples\GithubCodeexamples.md
+  - General Directives:
+    - Guide to Best-Practice Application Patterns: docs\Anvisninger\Generelt\AnvisningerGenerelt.md
+    - Guide to Best-Practice Directives: docs\Anvisninger\Generelt\VejledningGenerelt.md
+  - Directives SDI:
+    - Document (Dokument) Object: docs\Anvisninger\SDI\AnvisningerDokumentobjektetSagsDokumentobjekt.md
+    - Case (Sag) Object: docs\Anvisninger\SDI\AnvisningerSagsObjekt.md
+  - Directives YDI:
+    - Grant (Bevillings) Object: docs\Anvisninger\YDI\AnvisningerBevillingsobjekt.md
+    - Economic Effectuation (Økonomisk Effektuerings) Object: docs\Anvisninger\YDI\AnvisningerOekonomiskEffektueringsobjektet.md
