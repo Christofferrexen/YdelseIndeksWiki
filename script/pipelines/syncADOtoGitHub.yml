@@ -1,0 +1,6 @@
+name: Push  Azure Repository changes to GitHub Repository to keep it in Sync
+on:
+  push:
+    branches:
+      - '*' # Applies for all Branches in GitHub
+    workflows_dispath: # Pipeline trigger from Azure to GitHub
